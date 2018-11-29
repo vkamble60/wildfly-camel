@@ -274,12 +274,15 @@ restlet                                             #2024 Blocked by camel-2.21.
 [undecided]
 as2
 atmos
+corda
 google-sheets
 google-sheets-stream
 ipfs
+jgroups-raft
 nsq
 service
 web3j
+websocket-jsr356
 xchange
 
 [rejected]
