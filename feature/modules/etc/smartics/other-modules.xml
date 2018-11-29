@@ -93,13 +93,33 @@
             <property name="jboss.api" value="private"/>
         </properties>
         <include artifact="com.amazonaws:aws-java-sdk" />
+        <include artifact="com.amazonaws:aws-java-sdk-amplify" />
+        <include artifact="com.amazonaws:aws-java-sdk-appmesh" />
+        <include artifact="com.amazonaws:aws-java-sdk-chime" />
         <include artifact="com.amazonaws:aws-java-sdk-cloudfront" />
         <include artifact="com.amazonaws:aws-java-sdk-cloudwatch" />
+        <include artifact="com.amazonaws:aws-java-sdk-comprehendmedical" />
         <include artifact="com.amazonaws:aws-java-sdk-core" />
+        <include artifact="com.amazonaws:aws-java-sdk-datasync" />
         <include artifact="com.amazonaws:aws-java-sdk-dynamodb" />
         <include artifact="com.amazonaws:aws-java-sdk-ec2" />
+        <include artifact="com.amazonaws:aws-java-sdk-fsx" />
+        <include artifact="com.amazonaws:aws-java-sdk-globalaccelerator" />
+        <include artifact="com.amazonaws:aws-java-sdk-kafka" />
         <include artifact="com.amazonaws:aws-java-sdk-kinesis" />
+        <include artifact="com.amazonaws:aws-java-sdk-kinesisanalyticsv2" />
+        <include artifact="com.amazonaws:aws-java-sdk-licensemanager" />
+        <include artifact="com.amazonaws:aws-java-sdk-mediaconnect" />
+        <include artifact="com.amazonaws:aws-java-sdk-pinpointemail" />
+        <include artifact="com.amazonaws:aws-java-sdk-pinpointsmsvoice" />
+        <include artifact="com.amazonaws:aws-java-sdk-quicksight" />
+        <include artifact="com.amazonaws:aws-java-sdk-ram" />
+        <include artifact="com.amazonaws:aws-java-sdk-rdsdata" />
+        <include artifact="com.amazonaws:aws-java-sdk-robomaker" />
+        <include artifact="com.amazonaws:aws-java-sdk-route53resolver" />
         <include artifact="com.amazonaws:aws-java-sdk-s3" />
+        <include artifact="com.amazonaws:aws-java-sdk-s3control" />
+        <include artifact="com.amazonaws:aws-java-sdk-securityhub" />
         <include artifact="com.amazonaws:aws-java-sdk-ses" />
         <include artifact="com.amazonaws:aws-java-sdk-signer" />
         <include artifact="com.amazonaws:aws-java-sdk-simpledb" />
@@ -107,6 +127,7 @@
         <include artifact="com.amazonaws:aws-java-sdk-sns" />
         <include artifact="com.amazonaws:aws-java-sdk-sqs" />
         <include artifact="com.amazonaws:aws-java-sdk-swf-libraries" />
+        <include artifact="com.amazonaws:aws-java-sdk-transfer" />
         <include artifact="com.amazonaws:jmespath-java" />
         <apply-to-dependencies skip="true">
             <include module="com.amazon.aws.skipped" />
@@ -120,18 +141,19 @@
             <module name="com.fasterxml.jackson.dataformat.cbor" />
         </dependencies>
         <exports>
-            <exclude path="com/amazonaws/auth/internal" />
-            <exclude path="com/amazonaws/auth/policy/internal" />
+            <exclude path="com/amazonaws/auth/internal**" />
+            <exclude path="com/amazonaws/auth/policy/internal**" />
             <exclude path="com/amazonaws/auth/profile/internal**" />
             <exclude path="com/amazonaws/internal**" />
             <exclude path="com/amazonaws/metrics/internal**" />
             <exclude path="com/amazonaws/monitoring/internal**" />
-            <exclude path="com/amazonaws/protocol/json/internal" />
-            <exclude path="com/amazonaws/retry/internal" />
-            <exclude path="com/amazonaws/services/dynamodbv2/document/internal" />
+            <exclude path="com/amazonaws/protocol/json/internal**" />
+            <exclude path="com/amazonaws/retry/internal**" />
+            <exclude path="com/amazonaws/services/dynamodbv2/document/internal**" />
             <exclude path="com/amazonaws/services/s3/internal**" />
-            <exclude path="com/amazonaws/services/s3/transfer/internal" />
-            <exclude path="com/amazonaws/services/simpledb/internal" />
+            <exclude path="com/amazonaws/services/s3/transfer/internal**" />
+            <exclude path="com/amazonaws/services/s3control/internal**" />
+            <exclude path="com/amazonaws/services/simpledb/internal**" />
             <exclude path="com/amazonaws/services/sqs/internal**" />
         </exports>
     </module>
@@ -1432,6 +1454,9 @@
             <property name="jboss.api" value="private"/>
         </properties>
         <include artifact="org.apache.kafka:kafka-clients" />
+        <apply-to-dependencies skip="true">
+            <include module="com.github.luben.zstd-jni" />
+        </apply-to-dependencies>
         <dependencies>
             <module name="javax.api"/>
         </dependencies>

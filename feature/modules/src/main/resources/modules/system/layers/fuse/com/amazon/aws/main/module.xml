@@ -5,13 +5,33 @@
   </properties>
   <resources>
     <artifact name="${com.amazonaws:aws-java-sdk}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-amplify}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-appmesh}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-chime}" />
     <artifact name="${com.amazonaws:aws-java-sdk-cloudfront}" />
     <artifact name="${com.amazonaws:aws-java-sdk-cloudwatch}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-comprehendmedical}" />
     <artifact name="${com.amazonaws:aws-java-sdk-core}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-datasync}" />
     <artifact name="${com.amazonaws:aws-java-sdk-dynamodb}" />
     <artifact name="${com.amazonaws:aws-java-sdk-ec2}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-fsx}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-globalaccelerator}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-kafka}" />
     <artifact name="${com.amazonaws:aws-java-sdk-kinesis}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-kinesisanalyticsv2}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-licensemanager}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-mediaconnect}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-pinpointemail}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-pinpointsmsvoice}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-quicksight}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-ram}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-rdsdata}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-robomaker}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-route53resolver}" />
     <artifact name="${com.amazonaws:aws-java-sdk-s3}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-s3control}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-securityhub}" />
     <artifact name="${com.amazonaws:aws-java-sdk-ses}" />
     <artifact name="${com.amazonaws:aws-java-sdk-signer}" />
     <artifact name="${com.amazonaws:aws-java-sdk-simpledb}" />
@@ -19,6 +39,7 @@
     <artifact name="${com.amazonaws:aws-java-sdk-sns}" />
     <artifact name="${com.amazonaws:aws-java-sdk-sqs}" />
     <artifact name="${com.amazonaws:aws-java-sdk-swf-libraries}" />
+    <artifact name="${com.amazonaws:aws-java-sdk-transfer}" />
     <artifact name="${com.amazonaws:jmespath-java}" />
   </resources>
   <dependencies>
@@ -33,18 +54,19 @@
     <module name="org.joda.time" />
   </dependencies>
   <exports>
-    <exclude path="com/amazonaws/auth/internal" />
-    <exclude path="com/amazonaws/auth/policy/internal" />
+    <exclude path="com/amazonaws/auth/internal**" />
+    <exclude path="com/amazonaws/auth/policy/internal**" />
     <exclude path="com/amazonaws/auth/profile/internal**" />
     <exclude path="com/amazonaws/internal**" />
     <exclude path="com/amazonaws/metrics/internal**" />
     <exclude path="com/amazonaws/monitoring/internal**" />
-    <exclude path="com/amazonaws/protocol/json/internal" />
-    <exclude path="com/amazonaws/retry/internal" />
-    <exclude path="com/amazonaws/services/dynamodbv2/document/internal" />
+    <exclude path="com/amazonaws/protocol/json/internal**" />
+    <exclude path="com/amazonaws/retry/internal**" />
+    <exclude path="com/amazonaws/services/dynamodbv2/document/internal**" />
     <exclude path="com/amazonaws/services/s3/internal**" />
-    <exclude path="com/amazonaws/services/s3/transfer/internal" />
-    <exclude path="com/amazonaws/services/simpledb/internal" />
+    <exclude path="com/amazonaws/services/s3/transfer/internal**" />
+    <exclude path="com/amazonaws/services/s3control/internal**" />
+    <exclude path="com/amazonaws/services/simpledb/internal**" />
     <exclude path="com/amazonaws/services/sqs/internal**" />
   </exports>
 </module>
